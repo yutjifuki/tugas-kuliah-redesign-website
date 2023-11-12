@@ -255,33 +255,35 @@ fieldset {
   position: fixed;
   right: 0;
   top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 99999;
 }
 
 .preloader p {
   position: absolute;
-  top: 48%;
   left: 50%;
   text-align: center;
   font-size: 20px;
+  display: flex;
   color: var(--primary-blck);
 }
 
-.preloader:before,
-.preloader:after {
+.preloader p:before,
+.preloader p:after {
   content: "";
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: -35px;
+  left: clamp(-90px, -90%, -60px);
   background-color: var(--primary-purple);
   animation: squaremove 1s ease-in-out infinite;
   -webkit-animation: squaremove 1s ease-in-out infinite;
 }
 
-.preloader:after {
-  bottom: 0px;
+.preloader p:after {
   background-color: var(--aksen-orange);
   animation-delay: 0.3s;
 }
@@ -1510,10 +1512,6 @@ ul.portfolio li.active {
 }
 
 @media only screen and (max-width: 767px) {
-  .preloader:before,
-  .preloader:after {
-    left: 30%;
-  }
   .navbar-toggle .icon-bar {
     background: var(--primary-purple);
   }
@@ -1629,10 +1627,6 @@ ul.portfolio li.active {
 }
 
 @media only screen and (max-width: 501px) {
-  .preloader:before,
-  .preloader:after {
-    left: 25%;
-  }
   .experience-item {
     display: block;
   }
