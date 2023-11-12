@@ -1510,6 +1510,10 @@ ul.portfolio li.active {
 }
 
 @media only screen and (max-width: 767px) {
+  .preloader:before,
+  .preloader:after {
+    left: 30%;
+  }
   .navbar-toggle .icon-bar {
     background: var(--primary-purple);
   }
@@ -1625,6 +1629,10 @@ ul.portfolio li.active {
 }
 
 @media only screen and (max-width: 501px) {
+  .preloader:before,
+  .preloader:after {
+    left: 25%;
+  }
   .experience-item {
     display: block;
   }
